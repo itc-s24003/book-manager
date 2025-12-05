@@ -1,0 +1,41 @@
+{
+  "name": "book_manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev:app": "tsx --env-file=.env --watch=./src/* ./src/app.ts",
+    "docker": "docker compose -f ./docker/compose.yaml up -d",
+    "docker:down": "docker compose -f ./docker/compose.yaml down",
+    "dev": "pnpm run docker && pnpm run dev:app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.4",
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.0.0",
+    "@prisma/client": "^6.19.0",
+    "@types/passport-local": "^1.0.38",
+    "argon2": "^0.44.0",
+    "connect-redis": "^9.0.0",
+    "cookie-parser": "^1.4.7",
+    "db": "link:src/generated/prisma",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "express-validator": "^7.3.1",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "prisma": "^6.19.0",
+    "redis": "^5.10.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.3",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/express": "^5.0.5",
+    "@types/express-session": "^1.18.2",
+    "@types/passport": "^1.0.17"
+  }
+}
