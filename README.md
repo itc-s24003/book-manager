@@ -262,11 +262,8 @@ curl "http://localhost:3000/search/publisher?name=岩波書店"
 ### 利用可能なコマンド
 
 ```bash
-# 開発環境の起動（Docker + アプリ）
+# 開発環境の起動
 pnpm run dev
-
-# アプリケーションのみ起動
-pnpm run dev:app
 
 # Dockerコンテナ起動
 pnpm run docker
